@@ -1,0 +1,12 @@
+<div class="col-12">
+    <div class="col-9 home-cnt">
+
+        <!-------------------------Blog card--------------------------->
+        <div *ngIf="blogsArticlesArr.length > 0">
+            <div *ngFor="let blog of blogsArticlesArr;let i = index">
+                <app-single-blog [blog]="blog"></app-single-blog>
+            </div>
+        </div>
+        <!------------------------------------------------------------->
+    </div>
+</div>

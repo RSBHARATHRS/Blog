@@ -1,0 +1,19 @@
+<div class="col-12">
+  <div class="col-9 home-cnt">
+
+    <!-------------------------Blog card--------------------------->
+    <div *ngIf="blogsArticlesArr.length > 0">
+      <div *ngFor="let blog of blogsArticlesArr;let i = index">
+        <ng-container *ngIf="i < 5">
+          <app-single-blog [blog]="blog"></app-single-blog>
+        </ng-container>
+
+      </div>
+    </div>
+    <!------------------------------------------------------------->
+    <div class="view-more-cnt">
+      <a [routerLink]="['../blog']">View More</a>
+    </div>
+
+  </div>
+</div>

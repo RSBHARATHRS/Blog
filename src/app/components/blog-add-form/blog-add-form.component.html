@@ -1,0 +1,58 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)" class="from-cnt">
+    <div>
+        <label for="title">
+            Title:<br>
+            <input formControlName="title" placeholder="Your name"
+                [ngClass]="{'invalid': myForm.get('title')?.invalid && (myForm.get('title')?.dirty || myForm.get('title')?.touched)}">
+        </label>
+        <div class="error"
+            *ngIf="myForm.get('title')?.invalid && (myForm.get('title')?.dirty || myForm.get('title')?.touched)">
+            Please provide a Title.
+        </div>
+    </div>
+    <div>
+        <label>
+            Author:<br>
+            <input formControlName="author" placeholder="Your author">
+        </label>
+        <div class="error"
+            *ngIf="myForm.get('author')?.invalid && (myForm.get('author')?.dirty || myForm.get('author')?.touched)">
+            Please provide a valid author name.
+        </div>
+    </div>
+    <div>
+        <label>
+            Description:<br>
+            <input formControlName="description" placeholder="Your message">
+        </label>
+        <div class="error"
+            *ngIf="myForm.get('description')?.invalid && (myForm.get('description')?.dirty || myForm.get('description')?.touched)">
+            Content must be at least 15 characters long.
+        </div>
+    </div>
+    <div>
+        <label>
+            Content:<br>
+            <textarea formControlName="content" placeholder="Your message"></textarea>
+        </label>
+        <div class="error"
+            *ngIf="myForm.get('content')?.invalid && (myForm.get('content')?.dirty || myForm.get('content')?.touched)">
+            Content must be at least 15 characters long.
+        </div>
+    </div>
+    <div>
+        <label>
+            Enter Image URL:<br>
+            <input formControlName="imgUrl" placeholder="Image Url">
+        </label>
+        <div class="error"
+            *ngIf="myForm.get('imgUrl')?.invalid && (myForm.get('imgUrl')?.dirty || myForm.get('imgUrl')?.touched)">
+            Messages must be at least 15 characters long.
+        </div>
+    </div>
+    <div class="button-cnt">
+        <button type="submit" [disabled]="myForm.invalid">Post</button>
+        <button (click)="resetForm()">Reset</button>
+    </div>
+
+</form>

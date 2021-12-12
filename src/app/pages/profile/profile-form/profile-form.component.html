@@ -1,0 +1,114 @@
+<div class="container">
+    <h1>Edit Profile</h1>
+    <form [formGroup]="myProfileForm" (ngSubmit)="onSubmit(myProfileForm)" class="from-cnt">
+        <div class="input-section">
+            <div class="profile-div">
+
+                <!-- <input type="file" (change)="onFileUpload($event)"> -->
+
+                <img src="/assets/no-dp.png" alt="profile pic" width="180">
+            </div>
+        </div>
+
+        <div class="input-section">
+            <label for="firstName">
+                firstName:<br>
+                <input formControlName="firstName" placeholder="Your First Name"
+                    [ngClass]="{'invalid': myProfileForm.get('firstName').invalid && (myProfileForm.get('firstName').dirty || myProfileForm.get('firstName').touched)}">
+            </label>
+            <div class="error"
+                *ngIf="myProfileForm.get('firstName')?.invalid && (myProfileForm.get('firstName')?.dirty || myProfileForm.get('firstName')?.touched)">
+                Please provide a firstName.
+            </div>
+        </div>
+
+        <div class="input-section">
+            <label>
+                lastName:<br>
+                <input formControlName="lastName" placeholder="Your Last Name">
+            </label>
+            <div class="error"
+                *ngIf="myProfileForm.get('lastName').invalid && (myProfileForm.get('lastName').dirty || myProfileForm.get('lastName').touched)">
+                Please provide a valid lastName name.
+            </div>
+        </div>
+
+        <div class="input-section">
+            <label>
+                email:<br>
+                <input formControlName="email" placeholder="Your email">
+            </label>
+            <div class="error"
+                *ngIf="myProfileForm.get('email').invalid && (myProfileForm.get('email').dirty || myProfileForm.get('email')?.touched)">
+                Content must be at least 15 characters long.
+            </div>
+        </div>
+
+        <div class="input-section">
+            <label>
+                Mobile Number:<br>
+                <input formControlName="mobileNo" placeholder="Your Mobile Number">
+            </label>
+            <div class="error"
+                *ngIf="myProfileForm.get('mobileNo')?.invalid && (myProfileForm.get('mobileNo').dirty || myProfileForm.get('mobileNo').touched)">
+                mobileNo must be at least 15 characters long.
+            </div>
+        </div>
+
+        <div class="input-section">
+            <label>
+                Date of Birth:<br>
+                <input type="date" formControlName="DOB" placeholder="Select Your DOB">
+            </label>
+            <div class="error"
+                *ngIf="myProfileForm.get('DOB').invalid && (myProfileForm.get('DOB').dirty || myProfileForm.get('DOB').touched)">
+                Select Valid DOB
+            </div>
+        </div>
+
+        <div class="input-section">
+            <label>
+                Address:<br>
+                <input formControlName="address" placeholder="Your Address">
+            </label>
+            <div class="error"
+                *ngIf="myProfileForm.get('address').invalid && (myProfileForm.get('address').dirty || myProfileForm.get('address').touched)">
+                address must be at least 15 characters long.
+            </div>
+        </div>
+
+        <div class="input-section">
+            <label>
+                Country:<br>
+                <select formControlName="country">
+                    <option value="India">India</option>
+                    <option value="China">China</option>
+                    <option value="Japan">Japan</option>
+                    <option value="UK">UK</option>
+                    <option value="US">US</option>
+                </select>
+            </label>
+            <div class="error"
+                *ngIf="myProfileForm.get('country').invalid && (myProfileForm.get('country').dirty || myProfileForm.get('country').touched)">
+                Select Valid Country
+            </div>
+        </div>
+
+        <div class="input-section">
+            <label>
+                About yourself:<br>
+                <textarea formControlName="selfInfo" placeholder="Enter something about yourself"></textarea>
+            </label>
+            <div class="error"
+                *ngIf="myProfileForm.get('selfInfo').invalid && (myProfileForm.get('selfInfo').dirty || myProfileForm.get('selfInfo').touched)">
+                About yourself must be at least 15 characters long.
+            </div>
+        </div>
+
+        <div class="button-cnt">
+            <button type="submit" [disabled]="myProfileForm.invalid">Save Profile</button>
+            <button (click)="resetForm()">Reset</button>
+        </div>
+
+    </form>
+</div>

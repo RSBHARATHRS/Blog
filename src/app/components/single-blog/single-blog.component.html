@@ -1,0 +1,19 @@
+<!-------------------------Blog card--------------------------->
+<div class="blog-card">
+    <div class="blog-header">
+        <img [src]="blog.urlToImage" alt="Blog Image" *ngIf="blog.urlToImage != null; else elseImg ">
+        <ng-template #elseImg>
+            <img [src]="noImgPath">
+        </ng-template>
+    </div>
+
+    <div class="blog-body">
+        <h2 [routerLink]="[blog.url]">{{blog.title}}</h2>
+        <span class="date">{{blog.publishedAt | date:'medium'}}</span>
+        <p>{{blog.description }}</p>
+    </div>
+
+    <div class="clr"></div>
+    <a class="read-more-btn" [routerLink]="[blog.url]">Read more</a>
+</div>
+<!------------------------------------------------------------->

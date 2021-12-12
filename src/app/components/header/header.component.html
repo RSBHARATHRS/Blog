@@ -1,0 +1,29 @@
+<header class="header">
+  <div class="container col-9">
+
+    <div class="logo-img-cnt" [routerLink]="['/home']">
+      <img [src]="logoImgPath" alt="Logo Image" height=70>
+    </div>
+
+    <div class="nav-cnt">
+      <nav>
+        <ul>
+          <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+          <li><a routerLink="/blog" routerLinkActive="active">Blog</a></li>
+          <li><a routerLink="/addBlog" routerLinkActive="active">Add Blog</a></li>
+          <li><a routerLink="/profile" routerLinkActive="active" class="profile-a">
+              <div class="profile-div"><img src="../../../assets/no-dp.png" alt="profile pic" width="80">
+                <div class="profile-header-body">
+                  <h3>{{profile.firstName}}</h3>
+                  <small>{{profile.email}}</small>
+                </div>
+              </div>
+            </a></li>
+        </ul>
+      </nav>
+
+    </div>
+    <div class="clr"></div>
+  </div>
+
+</header>

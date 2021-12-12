@@ -1,0 +1,62 @@
+.home-cnt{
+    margin: 0 auto;
+  }
+  
+  .blog-card{
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+
+    border:1px solid transparent;
+    transition: all .4s ease-out;
+  }
+
+  .blog-card:hover{
+    border-color: orange;   
+  }
+
+  .blog-card:hover h2{
+    color: blue;
+    cursor: pointer;
+  }
+  
+.date{
+  color: gray;
+  font-style: italic;
+}
+
+.blog-header{
+  width: 40%;
+  float: left;
+  
+}
+
+.read-more-btn{
+  color: blue;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.blog-header > img{
+    width: 100%;
+  }
+
+  .blog-body{
+    width: 60%;
+    float: right;
+    padding: 0 20px;
+  }
+  
+  button{
+    padding: 18px;
+    border: none;
+    font-size: 18px;
+  }
+  
+  .read-more-btn{
+    color: blue;
+  }

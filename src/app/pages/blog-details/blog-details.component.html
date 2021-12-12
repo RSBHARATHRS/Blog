@@ -1,0 +1,23 @@
+<div class="container">
+
+    <div class="blog-header">
+        <img [src]="blog.urlToImage" alt="Blog Image"
+            *ngIf="blog.urlToImage != null && blog.urlToImage != ''; else elseImg ">
+        <ng-template #elseImg>
+            <img [src]="noImgPath">
+        </ng-template>
+    </div>
+
+    <div class="blog-body">
+        <h2>{{blog.title}}</h2>
+        <h4>{{blog.author}}</h4>
+        <span>{{blog.publishedAt}}</span>
+        <div class="cont"><strong>Content: </strong>{{blog.content}}</div>
+        <p class="cont"><strong>Description: </strong>{{blog.description}}</p>
+    </div>
+
+    <div class="buttons-cnt">
+        <button (click)="deleteBlog()" class="delete btn">Delete Blog</button>
+        <button (click)="editBlog()" class="edit btn">Edit Blog</button>
+    </div>
+</div>

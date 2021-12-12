@@ -1,0 +1,72 @@
+.header{
+  background-color: orange;
+}
+
+.header::after{
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container{
+
+  margin: 0 auto;
+
+}
+
+.logo-img-cnt{
+  float: left;
+  padding: 6px;
+}
+
+.logo-img-cnt:hover{
+  cursor: pointer;
+}
+
+.nav-cnt{
+  float: right; 
+  width: auto;
+}
+
+.nav-cnt nav ul{
+  height: 100%;
+}
+
+.nav-cnt nav ul li{
+  display: inline-block;
+
+}
+
+.nav-cnt nav ul li a{
+  display: inline-block;
+  padding: 28px;
+  transition: all .4s ease;
+  vertical-align: bottom;
+}
+
+.nav-cnt nav ul li:hover a{
+  background-color: rgb(240, 209, 36);
+  color: white;
+}
+
+.nav-cnt nav ul li a{
+  font-size: 28px;
+
+}
+
+/**Profile header**/
+.profile-a{
+  padding: 4px 16px!important;
+  margin: 0;
+}
+.profile-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-a img{
+  border-radius: 50%;
+  margin-right: 10px;
+}

@@ -1,0 +1,18 @@
+.home-cnt{
+  margin: 0 auto;
+  
+}
+
+.read-more-btn{
+  color: blue;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.view-more-cnt{
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}

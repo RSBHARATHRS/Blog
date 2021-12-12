@@ -1,0 +1,64 @@
+.container{
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+   
+}
+
+.blog-header img{
+    width:100%;
+}
+
+.blog-body{
+    background-color:#fff;
+    width:80%;
+    margin:0 auto;
+    
+    box-shadow: rgba(17, 17, 26, 0.6) 0px 0px 16px;
+    padding:10px;
+    border-radius:10px;
+    
+    margin-bottom: 26px;
+}
+
+.btn{
+    padding: 10px;
+    font-size: 22px;
+    color: white;
+    border:0;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.delete{
+    background-color: red;
+}
+
+.edit{
+    color: white;
+    background-color: orange;
+}
+
+.buttons-cnt{
+    display: flex;
+    justify-content: center;
+}
+
+
+.cont{
+    margin: 8px 0;
+}
+/****/
+.form-cnt{
+    
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: white;
+    bottom:0;
+    height: 0;
+    overflow: hidden;
+}
+

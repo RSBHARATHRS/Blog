@@ -1,0 +1,65 @@
+<ng-container *ngIf="!hasAccount; else  details">
+    <div class="btn-cnt">
+        <div class="acc">
+            <img [src]="logoImgPath" width="600">
+            <h2>You Don't have account in IDP Blog</h2>
+            <p>Please Create a Account</p>
+        </div>
+        <a class="edit-det" [routerLink]="['./create-profile']">Create Account</a>
+    </div>
+
+</ng-container>
+
+<ng-template #details>
+    <div class="container">
+        <div>
+            <div class="main-info ">
+                <div class="profile-div">
+                    <img src="../../../assets/no-dp.png" alt="profile pic" width="180">
+                    <div class="name-mail-cnt">
+                        <label>Name :</label>
+                        <h2>{{profile.firstName +" "+ profile.lastName}}</h2>
+                        <label>Email ID :</label>
+                        <p>{{profile.email}}</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="profile-body">
+                <hr>
+                <h3>Other Informations</h3>
+                <div>
+                    <label>Mobile No :</label>
+                    <p>{{profile.mobileNo}}</p>
+                </div>
+
+                <div>
+                    <label>DOB :</label>
+                    <p>{{profile.DOB}}</p>
+                </div>
+
+                <div>
+                    <label>Address:</label>
+                    <p>{{profile.address}}</p>
+                </div>
+
+                <div>
+                    <label>Country :</label>
+                    <p>{{profile.country}}</p>
+                </div>
+
+                <div>
+                    <label>Summary About yourself :</label>
+                    <p>{{profile.selfInfo}}</p>
+                </div>
+            </div>
+
+            <div class="btn-cnt">
+                <a class="edit-det" [routerLink]="['./update']">Edit Details</a>
+            </div>
+        </div>
+    </div>
+</ng-template>

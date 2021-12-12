@@ -1,0 +1,61 @@
+.container{
+  padding: 10px;
+}
+
+.profile-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  
+  .profile-a img{
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .profile-body{
+    width:60%;
+    margin: 0 auto ;
+  }
+
+  .btn-cnt{
+    text-align: center;
+  }
+
+  .edit-det{
+    display: inline-block;
+      padding: 10px;
+      background-color: green;
+      margin: 10px;
+  }
+
+  label{
+    font-weight: bold;
+    margin: 10px 0 4px 0;
+    display: inline-block;
+  }
+
+  h3{
+    color: orange;
+  }
+
+  .name-mail-cnt{
+    vertical-align: middle;
+    height: 100%;
+    margin: 10px;
+
+  }
+
+  hr{
+    margin: 10px 0;
+  }
+
+  .acc{
+    padding: 10px;
+    margin: 30px;
+  }
+
+  .acc img{
+    margin: 20px 0;
+  }
